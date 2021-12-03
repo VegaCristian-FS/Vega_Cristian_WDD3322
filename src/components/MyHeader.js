@@ -35,6 +35,7 @@ const styles={
         backgroundColor: '#000000'
     },
     logo:{
+        fontFamily: "manofa, sans-serif",
         color: 'white',
         fontSize: '2em'
     },

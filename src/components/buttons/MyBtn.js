@@ -18,12 +18,12 @@ const styles = {
         cursor: 'pointer',
         borderRadius: '5px',
         backgroundColor: '#136176',
-        color: 'white',
+        color: '#f7f7f7',
         width: '60px',
         fontWeight: 'bold'
     },
     '&:hover': {
-        color: 'white', 
+        color: 'f7f7f7', 
         backgroundColor: '#000'
     }
 }
