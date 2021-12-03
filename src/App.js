@@ -16,7 +16,7 @@ class App extends Component{
         
         <main style={styles.mainStyle}>
           <div style={styles.sideBar}>
-            <h2>Navigation Links</h2>
+            <h2 style={styles.h2}>Navigation Links</h2>
             <nav>
               <ul style={styles.sideBarUl}>
                 <li><a href=''>Newsfeed</a></li>
@@ -32,7 +32,7 @@ class App extends Component{
               username="GuestUser12345"
               postDetail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               postImg={TattooImg}/>
-              <FeedPost 
+            <FeedPost 
               avatarImg={AvatarIcon}
               username="GuestUser12345"
               postDetail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -81,5 +81,9 @@ const styles= {
     flexDirection: 'column',
     flex: 2,
     maxWidth: '600px'
+  },
+  h2:{
+    fontSize: '20px',
+    color: '#f7f7f7'
   }
 }
