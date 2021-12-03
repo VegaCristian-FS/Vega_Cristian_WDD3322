@@ -23,7 +23,6 @@ const styles = {
         fontWeight: 'bold'
     },
     '&:hover': {
-        color: 'f7f7f7', 
         backgroundColor: '#000'
     }
 }

@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import AvatarIcon from './images/Avatar200.png';
+import TattooImg from './images/postimg_01.jpg';
+import FeedPost from './components/FeedPost';
 import MyAds from './components/MyAds';
 import MyForm from './components/MyForm';
 import MyHeader from './components/MyHeader';
@@ -13,18 +16,27 @@ class App extends Component{
         
         <main style={styles.mainStyle}>
           <div style={styles.sideBar}>
-            <nav style={styles.sideBarNav}>
-              <li><a href=''>Test</a></li>
-              <li><a href=''>Test</a></li>
-              <li><a href=''>Test</a></li>
-              <li><a href=''>Test</a></li>
-              <li><a href=''>Test</a></li>
+            <h2>Navigation Links</h2>
+            <nav>
+              <ul style={styles.sideBarUl}>
+                <li><a href=''>Newsfeed</a></li>
+                <li><a href=''>Messages</a></li>
+                <li><a href=''>Watch</a></li>
+              </ul>
             </nav>
           </div>
-          {/* Sidebar*/}
           <div style={styles.wallFeed}>
             <MyForm />
-            {/* Feed */}
+            <FeedPost 
+              avatarImg={AvatarIcon}
+              username="GuestUser12345"
+              postDetail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              postImg={TattooImg}/>
+              <FeedPost 
+              avatarImg={AvatarIcon}
+              username="GuestUser12345"
+              postDetail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              postImg={TattooImg}/>
           </div> 
           <div>
             <MyAds cardTitle="New York Black Friday" cardDetail="Lorem Ipsum dolor amit set."/>
@@ -45,7 +57,7 @@ const styles= {
   mainStyle: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   sideBar:{
     display: 'flex',
@@ -53,13 +65,13 @@ const styles= {
     margin: '20px',
     padding: '20px',
     width: '300px',
-    color: "#f7f7f7",
     backgroundColor: '#242526',
     borderRadius: '8px',
-    lineHeight: '2',
-    
+    lineHeight: '2'  
   },
-  sideBarNav:{
+  sideBarUl:{
+    margin: '0',
+    padding: '0',
     fontSize: '20px',
     listStyleType: 'none',
     color: '#f7f7f7'
@@ -67,6 +79,7 @@ const styles= {
   wallFeed:{
     display: 'flex',
     flexDirection: 'column',
-    flex: 2
+    flex: 2,
+    maxWidth: '600px'
   }
 }
