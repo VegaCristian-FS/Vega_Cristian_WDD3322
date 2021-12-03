@@ -1,5 +1,6 @@
 import React from 'react';
 import StreetImg from '../images/advertise01.jpeg'
+import AdBtn from './buttons/AdBtn';
 
 const MyAds = props => {
     return(
@@ -7,6 +8,10 @@ const MyAds = props => {
             <img src={StreetImg} alt="People walking a street in New York City" />
             <h1 style={styles.adTitle}>{props.cardTitle}</h1>
             <p style={styles.adDetails}>{props.cardDetail}</p>
+            <div style={styles.adbtn}>
+                <AdBtn btnText="Learn More"/>
+                <AdBtn btnText="Share"/>
+            </div>
         </article>
     )
 }

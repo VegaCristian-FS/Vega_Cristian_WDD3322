@@ -11,7 +11,7 @@ const MyForm = props => {
                 <MyAvatar AvatarIcon={AvatarIcon}/>
                 <input type="text" styles={styles.inputField} placeholder="What's on your mind?" ></input>
             </div>
-            <MyBtn btnText="Post" style={styles.btn}/>
+            <MyBtn btnText="Post" />
         </form>
     )
 }
@@ -20,22 +20,20 @@ export default MyForm
 const styles = {
     myForm: {
         display: 'flex',
+        margin: '20px',
         flexDirection: 'column',
         justifyContent: 'center',
         backgroundColor: '#242526',
         borderRadius: '8px',
-        width: '500px',
-        height: '120px'
     },
     inputField: {
-        borderRadius: '8px'
+        padding: '20px',
+        borderRadius: '8px',
+        width: '80%'
     },
     inputContainer: {
         display: 'flex',
         flexDirection: 'row',
-        padding: "20px",
-    },
-    
-    btn: {
+        padding: '20px',
     }
 }
