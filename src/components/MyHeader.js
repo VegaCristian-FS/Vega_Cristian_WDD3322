@@ -57,7 +57,7 @@ const styles={
         paddingLeft: '15px',
         borderRadius: '8px 0 0 8px'       
     },
-    rightside:{ // Figure out whats going on with this.
+    rightside:{
     },
     rightIcons:{
         margin: '5px',
