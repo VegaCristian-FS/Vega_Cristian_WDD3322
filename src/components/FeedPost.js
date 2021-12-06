@@ -7,13 +7,13 @@ const FeedPost = props => {
     return (
         <article style={styles.articleContainer}>
             <div style={styles.postHeader}>
-                <MyAvatar AvatarIcon={props.avatarImg}/>
-                <h3 style={styles.h3}>{props.username}</h3>
+                <MyAvatar AvatarIcon={props.val.avatarImg}/>
+                <h3 style={styles.h3}>{props.val.username}</h3>
             </div>
-            <p style={styles.p}>{props.postDetail}</p>
+            <p style={styles.p}>{props.val.postDetail}</p>
             <img 
-                src={props.postImg} 
-                alt={props.postAlt}
+                src={props.val.postImg} 
+                alt={props.val.postAlt}
                 style={styles.postImg}/>
             <MyBtn btnText="Edit" />
             <MyBtn btnText="Delete" />

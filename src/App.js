@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AvatarIcon from './images/Avatar200.png';
 import TattooImg from './images/postimg_01.jpg';
+import TattooImg2 from './images/postimg_02.jpg';
 import FeedPost from './components/FeedPost';
 import MyAds from './components/MyAds';
 import MyForm from './components/MyForm';
@@ -8,7 +9,51 @@ import MyHeader from './components/MyHeader';
 
 
 class App extends Component{
+  state = {
+    wallPosts: [{
+      avatarImg: AvatarIcon,
+      username: 'GuestUser12345',
+      postDetail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      postImg: TattooImg,
+      postAlt: 'Black and white image of a tattoo artist working'
+    },
+    {
+      avatarImg: AvatarIcon,
+      username: 'GuestUser12345',
+      postDetail: '(No picture) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      postImg: '',
+      postAlt: ''
+    },
+    {
+      avatarImg: AvatarIcon,
+      username: 'GuestUser12345',
+      postDetail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      postImg: TattooImg2,
+      postAlt: 'Tattoo model posing showing tattoos.'
+    }]
+  }
+  
+  getInput = e =>{
+    this.setState({postDetail: e.target.value});
+  }
+  
+  //Spread Method
+  addItem = e => {
+    e.preventDefault();
+    this.setState({
+      wallPosts: [...this.state.wallPosts,{avatarImg:AvatarIcon, username:'GuestUser12345',postDetail:this.state.postDetail }]
+    });
+
+    //clear form
+    e.target.reset();
+  }
+
   render(){
+
+    let wallPosts = this.state.wallPosts.map((e, i) =>{
+      return <FeedPost key={i} val={e} />
+    })
+
     return (
       <div className="App" >
         <MyHeader />
@@ -26,17 +71,8 @@ class App extends Component{
             </nav>
           </div>
           <div style={styles.wallFeed}>
-            <MyForm />
-            <FeedPost 
-              avatarImg={AvatarIcon}
-              username="GuestUser12345"
-              postDetail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              postImg={TattooImg}/>
-            <FeedPost 
-              avatarImg={AvatarIcon}
-              username="GuestUser12345"
-              postDetail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              postImg={TattooImg}/>
+            <MyForm getInput={this.getInput} addItem={this.addItem} />
+            {wallPosts}
           </div> 
           <div>
             <MyAds cardTitle="New York Black Friday" cardDetail="Lorem Ipsum dolor amit set."/>
@@ -67,7 +103,7 @@ const styles= {
     width: '300px',
     backgroundColor: '#242526',
     borderRadius: '8px',
-    lineHeight: '2'  
+    lineHeight: '2'
   },
   sideBarUl:{
     margin: '0',

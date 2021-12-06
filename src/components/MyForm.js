@@ -6,10 +6,10 @@ import MyAvatar from './MyAvatar';
 
 const MyForm = props => {
     return (
-        <form style={styles.myForm} >
+        <form style={styles.myForm} onSubmit={props.addItem} >
             <div style={styles.inputContainer} >
                 <MyAvatar AvatarIcon={AvatarIcon}/>
-                <input type="text" styles={styles.inputField} placeholder="What's on your mind?" ></input>
+                <input type="text" value={props.postDetail} onChange={props.getInput} styles={styles.inputField} placeholder="What's on your mind?" ></input>
             </div>
             <MyBtn btnText="Post" />
         </form>
