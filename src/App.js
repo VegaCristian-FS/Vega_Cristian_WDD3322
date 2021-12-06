@@ -43,15 +43,40 @@ class App extends Component{
     this.setState({
       wallPosts: [...this.state.wallPosts,{avatarImg:AvatarIcon, username:'GuestUser12345',postDetail:this.state.postDetail }]
     });
-
     //clear form
     e.target.reset();
   }
 
-  render(){
+  removeItem(){     
+    // console.log(key);
+    // const newFeedList = [...this.state.wallPosts];
+    // newFeedList.splice(key, 1);
+    // this.setState(() => ({
+    //   wallPosts: newFeedList
+    // }));
+  }
 
-    let wallPosts = this.state.wallPosts.map((e, i) =>{
-      return <FeedPost key={i} val={e} />
+  // removeItem(key){
+  //   console.log(key);
+  //   const newFeedList = [...this.state.wallPosts.filter(post => post.key !== key)];
+  //   this.setState(() => ({
+  //     wallPosts: newFeedList
+  //   }));
+  // }
+
+  render(){
+    
+
+    let wallPosts = this.state.wallPosts.map((e, i) => {
+      return <FeedPost key={i} val={e}/>
+    })
+    
+    let deleteBtn = document.querySelectorAll('.deleteBtn');
+    deleteBtn.forEach((btn) => { 
+      btn.addEventListener("click", (e) => {
+        // this.removeItem();
+        console.log("click");
+      });
     })
 
     return (

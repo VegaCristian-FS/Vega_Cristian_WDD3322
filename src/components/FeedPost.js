@@ -15,8 +15,8 @@ const FeedPost = props => {
                 src={props.val.postImg} 
                 alt={props.val.postAlt}
                 style={styles.postImg}/>
-            <MyBtn btnText="Edit" />
-            <MyBtn btnText="Delete" />
+            <MyBtn btnText="Edit" className="editBtn"/>
+            <MyBtn btnText="Delete" className="deleteBtn"/>
         </article>
     )
 }

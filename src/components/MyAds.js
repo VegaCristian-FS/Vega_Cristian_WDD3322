@@ -19,7 +19,6 @@ export default MyAds;
 
 const styles= {
     myArticle: {
-        position: 'static',
         display: 'flex',
         flexDirection: 'column',
         margin: '20px',
