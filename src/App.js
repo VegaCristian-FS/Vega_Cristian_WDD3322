@@ -47,15 +47,17 @@ class App extends Component{
     e.target.reset();
   }
 
-  removeItem(){     
-    // console.log(key);
-    // const newFeedList = [...this.state.wallPosts];
-    // newFeedList.splice(key, 1);
-    // this.setState(() => ({
-    //   wallPosts: newFeedList
-    // }));
+  //Dont use
+  removeItem(key){     
+    console.log(key);
+    const newFeedList = [...this.state.wallPosts];
+    newFeedList.splice(key, 1);
+    this.setState(() => ({
+      wallPosts: newFeedList
+    }));
   }
 
+  //Use the Filter method for assignment.
   // removeItem(key){
   //   console.log(key);
   //   const newFeedList = [...this.state.wallPosts.filter(post => post.key !== key)];
@@ -68,15 +70,7 @@ class App extends Component{
     
 
     let wallPosts = this.state.wallPosts.map((e, i) => {
-      return <FeedPost key={i} val={e}/>
-    })
-    
-    let deleteBtn = document.querySelectorAll('.deleteBtn');
-    deleteBtn.forEach((btn) => { 
-      btn.addEventListener("click", (e) => {
-        // this.removeItem();
-        console.log("click");
-      });
+      return <FeedPost key={i} val={e} delMe={() =>this.removeItem(i)}/>
     })
 
     return (

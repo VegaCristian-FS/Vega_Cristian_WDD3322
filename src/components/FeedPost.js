@@ -5,18 +5,20 @@ import MyAvatar from './MyAvatar';
 
 const FeedPost = props => {
     return (
-        <article style={styles.articleContainer}>
+        <article key={props.i} style={styles.articleContainer}>
             <div style={styles.postHeader}>
                 <MyAvatar AvatarIcon={props.val.avatarImg}/>
                 <h3 style={styles.h3}>{props.val.username}</h3>
+                
             </div>
             <p style={styles.p}>{props.val.postDetail}</p>
             <img 
                 src={props.val.postImg} 
                 alt={props.val.postAlt}
                 style={styles.postImg}/>
-            <MyBtn btnText="Edit" className="editBtn"/>
-            <MyBtn btnText="Delete" className="deleteBtn"/>
+            <div style={styles.buttons}>
+                <MyBtn btnText="Delete" {...props}/>
+            </div>
         </article>
     )
 }
@@ -48,5 +50,9 @@ const styles = {
     },
     postImg:{
         maxWidth: '560px'
+    },
+    buttons:{
+        display: 'flex',
+        justifyContent: 'end'
     }
 }
