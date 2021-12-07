@@ -46,25 +46,15 @@ class App extends Component{
     //clear form
     e.target.reset();
   }
-
-  //Dont use
-  removeItem(key){     
-    console.log(key);
-    const newFeedList = [...this.state.wallPosts];
-    newFeedList.splice(key, 1);
+  
+  //Use the Filter method for assignment.
+  removeItem(key){
+    const newFeedList = this.state.wallPosts.filter(post => post !== this.state.wallPosts[key]);
+    console.log(newFeedList);
     this.setState(() => ({
       wallPosts: newFeedList
     }));
   }
-
-  //Use the Filter method for assignment.
-  // removeItem(key){
-  //   console.log(key);
-  //   const newFeedList = [...this.state.wallPosts.filter(post => post.key !== key)];
-  //   this.setState(() => ({
-  //     wallPosts: newFeedList
-  //   }));
-  // }
 
   render(){
     

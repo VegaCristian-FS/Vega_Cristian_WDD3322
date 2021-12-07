@@ -11,5 +11,7 @@
 - Learned how to apply styling using bindings.
 - Fully built project with what was learned this week.
 
-### 02_
-- Added fuctionality to add items to list dynamically 
+### 02_Application
+
+- Added fuctionality to add items to list dynamically.
+- Delete function added to project using the filter method.

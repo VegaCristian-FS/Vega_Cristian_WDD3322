@@ -5,7 +5,7 @@ import MyAvatar from './MyAvatar';
 
 const FeedPost = props => {
     return (
-        <article key={props.i} style={styles.articleContainer}>
+        <article id="test" key={props.i} style={styles.articleContainer}>
             <div style={styles.postHeader}>
                 <MyAvatar AvatarIcon={props.val.avatarImg}/>
                 <h3 style={styles.h3}>{props.val.username}</h3>
