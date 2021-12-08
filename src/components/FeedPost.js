@@ -2,7 +2,6 @@ import React from 'react';
 import MyBtn from './buttons/MyBtn';
 import MyAvatar from './MyAvatar';
 
-
 const FeedPost = props => {
     return (
         <article id="test" key={props.i} style={styles.articleContainer}>

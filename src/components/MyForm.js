@@ -3,7 +3,6 @@ import AvatarIcon from '../images/Avatar200.png';
 import MyBtn from './buttons/MyBtn';
 import MyAvatar from './MyAvatar';
 
-
 const MyForm = props => {
     return (
         <form style={styles.myForm} onSubmit={props.addItem} >

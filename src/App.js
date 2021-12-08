@@ -66,8 +66,6 @@ class App extends Component{
     return (
       <div className="App" >
         <MyHeader />
-        
-        
         <main style={styles.mainStyle}>
           <div style={styles.sideBar}>
             <h2 style={styles.h2}>Navigation Links</h2>
@@ -87,9 +85,7 @@ class App extends Component{
             <MyAds cardTitle="New York Black Friday" cardDetail="Lorem Ipsum dolor amit set."/>
             <MyAds cardTitle="New York Best Deals" cardDetail="Lorem Ipsum dolor amit set."/>
           </div>         
-          
         </main>
-      
       </div>
     );
   }
