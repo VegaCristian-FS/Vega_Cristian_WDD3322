@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Settings() {
-    const [pageTitle]= ['Settingseports'];
+    const [pageTitle]= ['Settings'];
     return (
         <section style={styles.container}>
             <h1>{pageTitle}</h1>
