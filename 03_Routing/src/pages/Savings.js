@@ -5,6 +5,7 @@ function Savings() {
     return (
         <section style={styles.container}>
             <h1>{pageTitle}</h1>
+            <p>Planning to start saving? You are in the right place.</p>
         </section>
     )
 }
@@ -13,11 +14,10 @@ export default Savings;
 
 const styles = {
     container: {
+        textAlign: 'left',
         display: 'felx',
         flexDirection: 'column',
-        height: '100vh',
-        width: '99vh',
-        paddingLeft: '2%',
+        paddingLeft: '250px',
         fontSize: '24px'
     }
 }

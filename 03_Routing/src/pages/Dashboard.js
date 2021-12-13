@@ -9,17 +9,10 @@ function Dashboard() {
         {chartHeader: 'Second Chart'}
     ])
     const [chartCircle] = useState([
-        {chartHeader: 'Stuff 1'},
-        {chartHeader: 'Stuff 2'}
+        {chartHeader: 'Third Chart'},
+        {chartHeader: 'Fourth Chart'},
+        {chartHeader: 'Fifth Chart'}
     ]);
-    // const [chartMed] = useState([
-    //     {chartHeader: 'Stuff 1'},
-    //     {chartHeader: 'Stuff 2'}
-    // ]);
-    // const [chartSmall] = useState([
-    //     {chartHeader: 'Stuff 1'},
-    //     {chartHeader: 'Stuff 2'}
-    // ]);
     return (
         <section style={styles.container}>
             <h1>{pageTitle}</h1>            
@@ -37,8 +30,6 @@ function Dashboard() {
                 chartCircle={chartCircle}
                 />
             ))}</p>
-            {/* <p>chart.map ((chart, id) => ( <ChartState key{id} id={id} chart={chart}</p> */}
-            {/* <p>chart.map ((chart, id) => ( <ChartState key{id} id={id} chart={chart}</p> */}
         </section>
     )
 }
@@ -54,6 +45,11 @@ const styles = {
         fontSize: '24px'
     },
     areaChart:{
-        margin: '20px'
+        display: 'flex',
+        ustifyContent: 'space-between',
+    },
+    circleChart:{
+        display: 'flex',
+        justifyContent: 'space-between',
     }
 }

@@ -16,6 +16,7 @@ const styles = {
         borderRadius: '8px',
         height: '350px',
         width: '740px',
+        margin: '20px',
         backgroundColor: '#242526',
         paddingLeft: '3rem',
         paddingTop: '1rem'

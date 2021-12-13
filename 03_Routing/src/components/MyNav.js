@@ -24,6 +24,7 @@ export default MyNav
 
 const styles = {
     aside:{
+        zIndex: '1',
         position: 'fixed',
         top: '0',
         left: '0',

@@ -13,11 +13,10 @@ export default Settings;
 
 const styles = {
     container: {
+        textAlign: 'left',
         display: 'felx',
         flexDirection: 'column',
-        height: '100vh',
-        width: '99vh',
-        paddingLeft: '2%',
+        paddingLeft: '250px',
         fontSize: '24px'
     }
 }
