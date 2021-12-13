@@ -11,5 +11,16 @@
 - Learned how to apply styling using bindings.
 - Fully built project with what was learned this week.
 
-### 02_
-- Added fuctionality to add items to list dynamically 
+### 02_Application
+
+- Added fuctionality to add items to list dynamically.
+- Functionality to delete items dynamically.
+- Understand the use of State and Lifecycles.
+- Created multiple Components.
+
+### 03_Routing
+
+- Work on React Routing.
+- Created custom Navigation using NavLink.
+- Used React Hooks.
+- Understand how useState works.
