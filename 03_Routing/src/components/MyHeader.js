@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaBell} from 'react-icons/fa';
+import { FaBell} from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import AvatarIcon from '../images/Avatar200.png';
 import MyAvatar from './MyAvatar';
@@ -13,9 +13,8 @@ const MyHeader = props => {
             </div>
             
             <div style={styles.rightSide}>
-                <button style={styles.rightIcons}><FaEnvelope /></button>
                 <button style={styles.rightIcons}><FaBell /></button>
-                <NavLink to='/Settings'> <MyAvatar AvatarIcon={AvatarIcon}/> </NavLink>
+                <NavLink to='/Settings'> <MyAvatar AvatarIcon={AvatarIcon}/></NavLink>
             </div>
         </header>
     )
@@ -28,9 +27,12 @@ const styles={
         felxDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        position: 'fixed',
+        zIndex: '1',
         height: '50px',
+        width: 'calc(100% - 240px)',
         marginLeft: '200px',
-        padding: '1%',
+        padding: '20px',
         backgroundColor: '#000000'
     },
     logo:{
@@ -39,9 +41,11 @@ const styles={
         fontSize: '2em'
     },
     rightIcons:{
-        margin: '5px',
+        margin: '15px',
         width: '35px',
         color: '#bbb',
-        
+        backgroundColor: '#000',
+        border: '#000',
+        fontSize: '1.8rem'
     }
 }

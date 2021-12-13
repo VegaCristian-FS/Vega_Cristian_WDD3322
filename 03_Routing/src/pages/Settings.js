@@ -5,8 +5,6 @@ function Settings() {
     return (
         <section style={styles.container}>
             <h1>{pageTitle}</h1>
-            <p>Some stuff here</p>
-            <p>Some stuff here</p>
         </section>
     )
 }
@@ -20,5 +18,6 @@ const styles = {
         height: '100vh',
         width: '99vh',
         paddingLeft: '2%',
+        fontSize: '24px'
     }
 }

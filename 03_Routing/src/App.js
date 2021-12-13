@@ -12,9 +12,10 @@ import Spending from './pages/Spending';
 function App() {
     return (
     <div className="App">
+      <MyHeader />
       <MyNav/>
-      <section>        
-        <MyHeader />
+      
+      <section style={styles.container}>
         <Routes>
           <Route exact path='/' element={<Dashboard />} />
           <Route path='/Dashboard' element={<Dashboard />} />
@@ -30,3 +31,11 @@ function App() {
 }
 
 export default App;
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    paddingTop: '5rem',
+  }
+}

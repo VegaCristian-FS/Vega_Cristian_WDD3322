@@ -9,7 +9,7 @@ export default MyAvatar
 
 const styles={
     MyAvatar:{
-        height: '38px',
+        height: '45px',
         cursor: 'pointer',
         borderRadius: '50%'
     }
