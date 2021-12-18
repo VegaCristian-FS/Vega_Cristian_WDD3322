@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {MdSpaceDashboard, MdAttachMoney, MdOutlineSavings} from 'react-icons/md';
 import {GoReport} from 'react-icons/go';
 import {GiPayMoney} from 'react-icons/gi';
@@ -9,11 +9,11 @@ const MyNav = props => {
         <aside style={styles.aside}>
             <nav>
                 <ul style={styles.nav}>
-                    <li><NavLink to='/Dashboard' style={styles.navContainer}><MdSpaceDashboard/> Dashboard</NavLink></li>
-                    <li><NavLink to='/Reports' style={styles.navContainer}><GoReport/> Reports</NavLink></li>
-                    <li><NavLink to='/Income' style={styles.navContainer}><MdAttachMoney/>Income</NavLink></li>
-                    <li><NavLink to='/Spending' style={styles.navContainer}><GiPayMoney/>Spending</NavLink></li>
-                    <li><NavLink to='/Savings' style={styles.navContainer}><MdOutlineSavings/>Savings</NavLink></li>
+                    <li><Link to='/Dashboard' style={styles.navContainer}><MdSpaceDashboard/> Dashboard</Link></li>
+                    <li><Link to='/Reports' style={styles.navContainer}><GoReport/> Reports</Link></li>
+                    <li><Link to='/Income' style={styles.navContainer}><MdAttachMoney/>Income</Link></li>
+                    <li><Link to='/Spending' style={styles.navContainer}><GiPayMoney/>Spending</Link></li>
+                    <li><Link to='/Savings' style={styles.navContainer}><MdOutlineSavings/>Savings</Link></li>
                 </ul>
                 
             </nav>

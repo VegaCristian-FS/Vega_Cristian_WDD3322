@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaBell} from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AvatarIcon from '../images/Avatar200.png';
 import MyAvatar from './MyAvatar';
 
@@ -14,7 +14,7 @@ const MyHeader = props => {
             
             <div style={styles.rightSide}>
                 <button style={styles.rightIcons}><FaBell /></button>
-                <NavLink to='/Settings'> <MyAvatar AvatarIcon={AvatarIcon}/></NavLink>
+                <Link to='/Settings'> <MyAvatar AvatarIcon={AvatarIcon}/></Link>
             </div>
         </header>
     )

@@ -10,23 +10,24 @@ import Settings from './pages/Settings';
 import Spending from './pages/Spending';
 
 function App() {
-    return (
-    <div className="App">
-      <MyHeader />
-      <MyNav/>
-      
-      <section style={styles.container}>
-        <Routes>
-          <Route exact path='/' element={<Dashboard />} />
-          <Route path='/Dashboard' element={<Dashboard />} />
-          <Route path='/Reports' element={<Reports/>} />
-          <Route path='/Income' element={<Income/>} />
-          <Route path='/Spending' element={<Spending/>} />
-          <Route path='/Savings' element={<Savings/>} />
-          <Route path='/Settings' element={<Settings/>} />
-        </Routes>
-      </section>
-    </div>
+  
+  return (
+  <div className="App">
+    <MyHeader />
+    <MyNav/>
+    
+    <section style={styles.container}>
+      <Routes>
+        <Route exact path='/' element={<Dashboard />} />
+        <Route path='/Dashboard' element={<Dashboard />} />
+        <Route path='/Reports' element={<Reports/>} />
+        <Route path='/Income' element={<Income/>} />
+        <Route path='/Spending' element={<Spending/>} />
+        <Route path='/Savings' element={<Savings/>} />
+        <Route path='/Settings' element={<Settings/>} />
+      </Routes>
+    </section>
+  </div>
   );
 }
 
