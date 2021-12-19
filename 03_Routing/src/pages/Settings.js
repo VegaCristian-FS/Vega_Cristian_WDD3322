@@ -1,40 +1,33 @@
 import React, { useEffect, useState } from 'react';
+import MyAvatar from '../components/MyAvatar';
 
 function Settings() {
     const [pageTitle]= ['Settings'];
-    const [userInfo, setuserData] = useState(null);
+    const [userData, setState] = useState(null);
 
     useEffect(() => {
         async function fetchAPI(){
             const response = await fetch('https://randomuser.me/api/');
             const data = await response.json();
-            //const [user] = data.results;
-            const [user] = data.results.map((user) => setuserData({
-                avatar: `${user.picture.large}`,
-                username: `${user.login.username}`,
-                firstName: `${user.name.first}`,
-                lastName: `${user.name.last}`,                
-                password: `${user.login.password}`,
-                email: `${user.email}`,
-                phone: `${user.phone}`,
-                steet: `${user.location.street.number} ${user.location.street.name}`,
-                city: `${user.location.city}`,
-                state: `${user.location.state}`,
-                zip: `${user.location.postcode}`
-            }));
-            setuserData(user);
+            const [user] = data.results;                
+            setState(user);
         }
         fetchAPI();
     }, []);
     return (
         <section style={styles.container}>
             <h1>{pageTitle}</h1>
-            <section>
-                {/* get info from the fetched data to fill in the props */}
-                {/* <MyAvatar AvatarIcon={}/> */}
-            </section>
-            {/* Edit Profile
-                avatar component
+            <article>
+                <div style={styles.profileHeader}>
+                    <h2 style={styles.editHeader}>Edit Profile</h2>
+                    {userData && <MyAvatar AvatarIcon={userData.picture.large} Height={'150'}/>}
+                </div>
+                <div>
+                    {/* {userData && </>}   */}
+                </div>
+                
+            </article>
+            {/* 
                 form
                 username
                 password

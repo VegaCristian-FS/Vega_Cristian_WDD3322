@@ -14,7 +14,7 @@ const MyHeader = props => {
             
             <div style={styles.rightSide}>
                 <button style={styles.rightIcons}><FaBell /></button>
-                <Link to='/Settings'> <MyAvatar AvatarIcon={AvatarIcon}/></Link>
+                <Link to='/Settings'> <MyAvatar AvatarIcon={AvatarIcon} Height={'50'}/></Link>
             </div>
         </header>
     )
