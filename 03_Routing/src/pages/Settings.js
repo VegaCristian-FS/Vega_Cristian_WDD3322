@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MyAvatar from '../components/MyAvatar';
+import MyProfile from '../components/MyProfile';
 
 function Settings() {
     const [pageTitle]= ['Settings'];
@@ -17,12 +18,13 @@ function Settings() {
     return (
         <section style={styles.container}>
             <h1>{pageTitle}</h1>
-            <article>
+            <article style={styles.formContainer}>
                 <div style={styles.profileHeader}>
-                    <h2 style={styles.editHeader}>Edit Profile</h2>
+                    <h2>Edit Profile</h2>
                     {userData && <MyAvatar AvatarIcon={userData.picture.large} Height={'150'}/>}
                 </div>
                 <div>
+                    <MyProfile/>
                     {/* {userData && </>}   */}
                 </div>
                 
@@ -50,6 +52,21 @@ const styles = {
         display: 'felx',
         flexDirection: 'column',
         paddingLeft: '250px',
-        fontSize: '24px'
+        fontSize: '24px',
+        
+    },
+    formContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        margin: '20px',
+        padding: '20px',
+        boxShadow: '0 4px 8px 0 rgba(0,0,0,0.4)',
+        borderRadius: '8px',
+        backgroundColor: '#242526'
+    },
+    profileHeader:{
+        margin: '0 auto',
+        fontSize: '20px'
     }
 }

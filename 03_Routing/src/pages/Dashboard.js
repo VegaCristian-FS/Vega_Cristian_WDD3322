@@ -46,7 +46,7 @@ const styles = {
     },
     areaChart:{
         display: 'flex',
-        ustifyContent: 'space-between',
+        justifyContent: 'space-between',
     },
     circleChart:{
         display: 'flex',
