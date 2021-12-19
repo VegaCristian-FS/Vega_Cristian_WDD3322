@@ -86,6 +86,7 @@ const styles = {
         backgroundColor: 'transparent',
         border: '2px solid #de8f8f',
         padding: '10px',
+        color: '#ffffff'
     },
     
 }

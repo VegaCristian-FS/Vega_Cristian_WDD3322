@@ -24,8 +24,19 @@ function Settings() {
                     {userData && <MyAvatar AvatarIcon={userData.picture.large} Height={'150'}/>}
                 </div>
                 <div>
-                    <MyProfile/>
-                    {/* {userData && </>}   */}
+                    {userData && <MyProfile 
+                    username={userData.login.username}
+                    password={userData.login.password}
+                    fName={userData.name.first}
+                    lName={userData.name.last}
+                    phone={userData.phone}
+                    street={`${userData.location.street.number}  ${userData.location.street.name}`}
+                    city={userData.location.city}
+                    state={userData.location.state}
+                    zip={userData.location.postcode}
+                    />}
+                    
+
                 </div>
                 
             </article>
