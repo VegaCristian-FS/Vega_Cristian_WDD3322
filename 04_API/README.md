@@ -24,3 +24,9 @@
 - Created custom Navigation using NavLink.
 - Used React Hooks.
 - Understand how useState works.
+
+### 04_API
+
+- Used React Hooks to Fetch data from API.
+- Used and understand Async/Await.
+- Create user login data and add the data dynamically.
