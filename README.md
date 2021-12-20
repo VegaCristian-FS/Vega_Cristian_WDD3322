@@ -2,8 +2,6 @@
 
 ## Programing for Web Applications
 
-## Application
-
 ### 01_Components
 
 - Learned how to create components
