@@ -3,7 +3,6 @@ import React from 'react';
 const MyAvatar = props => {
     return(
             <img src={props.AvatarIcon} alt={props.AvatarAlt} Height={props.Height} style={styles.avatar, imgStyles} />
-        
     )
 }
 export default MyAvatar
