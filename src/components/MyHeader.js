@@ -3,6 +3,7 @@ import {FaSearch, FaEnvelope, FaBell} from 'react-icons/fa';
 import AvatarIcon from '../images/Avatar200.png';
 import MyAvatar from './MyAvatar';
 
+
 const MyHeader = props => {
     return(
         <header style={styles.myHeader}>

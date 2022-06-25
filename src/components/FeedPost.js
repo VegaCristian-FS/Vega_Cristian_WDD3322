@@ -2,22 +2,21 @@ import React from 'react';
 import MyBtn from './buttons/MyBtn';
 import MyAvatar from './MyAvatar';
 
+
 const FeedPost = props => {
     return (
-        <article id="test" key={props.i} style={styles.articleContainer}>
+        <article style={styles.articleContainer}>
             <div style={styles.postHeader}>
-                <MyAvatar AvatarIcon={props.val.avatarImg}/>
-                <h3 style={styles.h3}>{props.val.username}</h3>
-                
+                <MyAvatar AvatarIcon={props.avatarImg}/>
+                <h3 style={styles.h3}>{props.username}</h3>
             </div>
-            <p style={styles.p}>{props.val.postDetail}</p>
+            <p style={styles.p}>{props.postDetail}</p>
             <img 
-                src={props.val.postImg} 
-                alt={props.val.postAlt}
+                src={props.postImg} 
+                alt={props.postAlt}
                 style={styles.postImg}/>
-            <div style={styles.buttons}>
-                <MyBtn btnText="Delete" {...props}/>
-            </div>
+            <MyBtn btnText="Edit" />
+            <MyBtn btnText="Delete" />
         </article>
     )
 }
@@ -49,9 +48,5 @@ const styles = {
     },
     postImg:{
         maxWidth: '560px'
-    },
-    buttons:{
-        display: 'flex',
-        justifyContent: 'end'
     }
 }
