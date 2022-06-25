@@ -3,15 +3,16 @@ import AvatarIcon from '../images/Avatar200.png';
 import MyBtn from './buttons/MyBtn';
 import MyAvatar from './MyAvatar';
 
-
 const MyForm = props => {
     return (
-        <form style={styles.myForm} >
+        <form style={styles.myForm} onSubmit={props.addItem} >
             <div style={styles.inputContainer} >
                 <MyAvatar AvatarIcon={AvatarIcon}/>
-                <input type="text" styles={styles.inputField} placeholder="What's on your mind?" ></input>
+                <input type="text" value={props.postDetail} onChange={props.getInput} style={styles.inputField} placeholder="What's on your mind?" />
             </div>
-            <MyBtn btnText="Post" />
+            <div style={styles.btnPlacement}>
+                <MyBtn btnText="Post" />
+            </div>
         </form>
     )
 }
@@ -27,13 +28,22 @@ const styles = {
         borderRadius: '8px',
     },
     inputField: {
-        padding: '20px',
+        display: 'flex',
+        flexDirection: 'row',
+        padding: '10px',
+        marginLeft: '10px',
         borderRadius: '8px',
         width: '80%'
     },
     inputContainer: {
+        width: '100%',
         display: 'flex',
         flexDirection: 'row',
         padding: '20px',
+    },
+    btnPlacement: {
+        display: 'flex',
+        justifyContent: 'end',
+        marginRight: '20px'
     }
 }

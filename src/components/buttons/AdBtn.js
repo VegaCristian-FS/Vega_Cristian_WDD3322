@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const AdBtn = props => {
     return (
         <button style={styles.mainBtn}>

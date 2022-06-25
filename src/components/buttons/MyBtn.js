@@ -1,9 +1,8 @@
 import React from 'react';
 
-
 const MyBtn = props => {
     return (
-        <button style={styles.mainBtn}>
+        <button style={styles.mainBtn} onClick={props.delMe}>
             {props.btnText}
         </button>
     )
