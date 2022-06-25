@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import AvatarIcon from './images/Avatar200.png';
 import TattooImg from './images/postimg_01.jpg';
-import TattooImg2 from './images/postimg_02.jpg';
 import FeedPost from './components/FeedPost';
 import MyAds from './components/MyAds';
 import MyForm from './components/MyForm';
@@ -9,63 +8,12 @@ import MyHeader from './components/MyHeader';
 
 
 class App extends Component{
-  state = {
-    wallPosts: [{
-      avatarImg: AvatarIcon,
-      username: 'GuestUser12345',
-      postDetail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      postImg: TattooImg,
-      postAlt: 'Black and white image of a tattoo artist working'
-    },
-    {
-      avatarImg: AvatarIcon,
-      username: 'GuestUser12345',
-      postDetail: '(No picture) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      postImg: '',
-      postAlt: ''
-    },
-    {
-      avatarImg: AvatarIcon,
-      username: 'GuestUser12345',
-      postDetail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      postImg: TattooImg2,
-      postAlt: 'Tattoo model posing showing tattoos.'
-    }]
-  }
-  
-  getInput = e =>{
-    this.setState({postDetail: e.target.value});
-  }
-  
-  //Spread Method
-  addItem = e => {
-    e.preventDefault();
-    this.setState({
-      wallPosts: [...this.state.wallPosts,{avatarImg:AvatarIcon, username:'GuestUser12345',postDetail:this.state.postDetail }]
-    });
-    //clear form
-    e.target.reset();
-  }
-  
-  //Use the Filter method for assignment.
-  removeItem(key){
-    const newFeedList = this.state.wallPosts.filter(post => post !== this.state.wallPosts[key]);
-    console.log(newFeedList);
-    this.setState(() => ({
-      wallPosts: newFeedList
-    }));
-  }
-
   render(){
-    
-
-    let wallPosts = this.state.wallPosts.map((e, i) => {
-      return <FeedPost key={i} val={e} delMe={() =>this.removeItem(i)}/>
-    })
-
     return (
       <div className="App" >
         <MyHeader />
+        
+        
         <main style={styles.mainStyle}>
           <div style={styles.sideBar}>
             <h2 style={styles.h2}>Navigation Links</h2>
@@ -78,14 +26,25 @@ class App extends Component{
             </nav>
           </div>
           <div style={styles.wallFeed}>
-            <MyForm getInput={this.getInput} addItem={this.addItem} />
-            {wallPosts}
+            <MyForm />
+            <FeedPost 
+              avatarImg={AvatarIcon}
+              username="GuestUser12345"
+              postDetail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              postImg={TattooImg}/>
+            <FeedPost 
+              avatarImg={AvatarIcon}
+              username="GuestUser12345"
+              postDetail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              postImg={TattooImg}/>
           </div> 
           <div>
             <MyAds cardTitle="New York Black Friday" cardDetail="Lorem Ipsum dolor amit set."/>
             <MyAds cardTitle="New York Best Deals" cardDetail="Lorem Ipsum dolor amit set."/>
           </div>         
+          
         </main>
+      
       </div>
     );
   }
@@ -108,7 +67,7 @@ const styles= {
     width: '300px',
     backgroundColor: '#242526',
     borderRadius: '8px',
-    lineHeight: '2'
+    lineHeight: '2'  
   },
   sideBarUl:{
     margin: '0',
